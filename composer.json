@@ -1,7 +1,7 @@
 {
-    "name": "owenelisa/resume",
+    "name": "owenelisa/resume.md",
     "description": "Owen Hester",
     "require": {
-        "dompdf/dompdf": "*"
+        "dompdf/dompdf": "^2.0"
     }
 }
