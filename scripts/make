@@ -1,0 +1,25 @@
+#!/bin/sh
+
+echo -n Generating resume.html...
+./scripts/make-html "$1" "$2.html"
+
+if [ $? -eq 0 ]; then
+   echo OK
+
+   echo -n Generating resume.pdf...
+   ./scripts/make-pdf.php "$2.html" "$2.pdf"
+
+   if [ $? -eq 0 ]; then
+      echo OK
+      return 0
+   else
+      echo FAIL
+   fi
+
+   echo
+   return 0
+fi
+
+echo FAIL
+echo HTML generation failed - cannot generate pdf.
+return 1

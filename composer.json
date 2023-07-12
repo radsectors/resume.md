@@ -1,0 +1,7 @@
+{
+    "name": "owenelisa/resume",
+    "description": "Owen Hester",
+    "require": {
+        "dompdf/dompdf": "*"
+    }
+}
